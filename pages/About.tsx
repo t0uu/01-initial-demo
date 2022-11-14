@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { DarkLayout } from "../components/layouts/DarkLayout";
+import { FC, PropsWithChildren } from "react";
+import { DarkLayout } from '../components/layouts/DarkLayout';
 import { MainLayout } from "../components/layouts/MainLayout";
 
 
 export default function About(){
     return (
      <>
+
 
       <h1>About Page</h1>
         <h1 className={'title'}>
@@ -17,11 +19,12 @@ export default function About(){
           Get started by editing{' '}
           <code className={'code'}>pages/About.js</code>
         </p>
+
      </>
     )
 }
 
-About.getLayout = function getLayout(page){
+About.getLayout = function getLayout(page:JSX.Element){
   return (
     <MainLayout>
       <DarkLayout>

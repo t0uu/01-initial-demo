@@ -5,25 +5,29 @@ import styles from './Navbar.module.css'
 const menuItems = [
   {
       text: 'Home',
-      href: '/'
+      href: '/',
+      index: '0'
   },
   {
       text: 'About',
-      href: '/About'
+      href: '/About',
+      index: '1'
   },
   {
       text: 'Contact',
-      href: '/Contact'
+      href: '/Contact',
+      index: '2'
   },
   {
       text: 'Pricing',
-      href: '/pricing'
+      href: '/pricing',
+      index: '3'
   },
 ];
 export const Navbar = () => {
   return (
     <nav className={styles['menu-container']}>
-     {menuItems.map(({text,href}) => <ActiveLink text={text} href={href} />
+     {menuItems.map(({text,href,index}) => <ActiveLink key={index} text={text} href={href} />
      )}
     </nav>
   )
